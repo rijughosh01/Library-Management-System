@@ -161,7 +161,10 @@ const BookList = () => {
               </Typography>
               <Typography variant="body2">ISBN: {book.isbn}</Typography>
               <Typography variant="body2">Genre: {book.genre}</Typography>
-              <Typography variant="body2">Publication Date: {new Date(book.publicationDate).toLocaleDateString()}</Typography>
+              <Typography variant="body2">
+                Publication Date:{" "}
+                {new Date(book.publicationDate).toLocaleDateString()}
+              </Typography>
             </CardContent>
             <CardActions>
               <Button size="small" onClick={() => deleteBook(book._id)}>

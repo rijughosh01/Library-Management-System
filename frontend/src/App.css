@@ -4,7 +4,8 @@ body {
   padding: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -55,7 +56,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin: 10px 0;  /* Add margin for better spacing */
+  margin: 10px 0;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -79,7 +80,8 @@ body.light {
   background-color: #f0f2f5;
 }
 
-body.light h1, body.light h2 {
+body.light h1,
+body.light h2 {
   color: #333;
 }
 
@@ -109,7 +111,8 @@ body.dark {
   background-color: #121212;
 }
 
-body.dark h1, body.dark h2 {
+body.dark h1,
+body.dark h2 {
   color: #fff;
 }
 
@@ -136,16 +139,16 @@ body.dark .delete-button {
 
 @media (max-width: 600px) {
   .container {
-      width: 95%;
-      padding: 10px;
+    width: 95%;
+    padding: 10px;
   }
 
   button {
-      width: 100%;
-      margin-top: 10px;
+    width: 100%;
+    margin-top: 10px;
   }
 
   input {
-      width: calc(100% - 20px);
+    width: calc(100% - 20px);
   }
 }
