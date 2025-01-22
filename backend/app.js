@@ -7,7 +7,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect("mongodb+srv://first-project:AD1yviieNPycK6oj@cluster0.tfozh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+mongoose.connect(
+  "mongodb+srv://first-project:AD1yviieNPycK6oj@cluster0.tfozh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+);
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
