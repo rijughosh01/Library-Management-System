@@ -31,7 +31,7 @@ const BookList = () => {
 
   const fetchBooks = useCallback(async () => {
     try {
-      const response = await axios.get("http://localhost:3000/books", {
+      const response = await axios.get("https://lib-manage-zya2.onrender.com", {
         headers: { Authorization: `Bearer ${token}` },
         params: searchParams,
       });
