@@ -48,7 +48,7 @@ const BookList = () => {
   const addBook = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/books",
+        "https://lib-manage-zya2.onrender.com",
         newBook,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -73,7 +73,7 @@ const BookList = () => {
 
   const deleteBook = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/books/${id}`, {
+      await axios.delete(`https://lib-manage-zya2.onrender.com/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBooks(books.filter((book) => book._id !== id));
@@ -91,7 +91,7 @@ const BookList = () => {
 
   const handleSearchSubmit = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/books", {
+      const response = await axios.get("https://lib-manage-zya2.onrender.com", {
         headers: { Authorization: `Bearer ${token}` },
         params: searchParams,
       });
