@@ -24,7 +24,7 @@ const MemberList = () => {
 
   const fetchMembers = useCallback(async () => {
     try {
-      const response = await axios.get("https://lib-manage-zya2.onrender.com", {
+      const response = await axios.get("http://localhost:3000/books", {
         headers: { Authorization: `Bearer ${token}` },
         params: searchParams,
       });
@@ -41,7 +41,7 @@ const MemberList = () => {
   const addMember = async () => {
     try {
       const response = await axios.post(
-        "https://lib-manage-zya2.onrender.com",
+        "http://localhost:3000/books",
         newMember,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -60,7 +60,7 @@ const MemberList = () => {
 
   const deleteMember = async (id) => {
     try {
-      await axios.delete(`https://lib-manage-zya2.onrender.com/${id}`, {
+      await axios.delete(`http://localhost:3000/books/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setMembers(members.filter((member) => member._id !== id));
